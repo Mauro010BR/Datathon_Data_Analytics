@@ -6,21 +6,21 @@ import gzip
 
 @st.cache_data
 def carregar_dados():
-    with gzip.open("df_vagas\df_final_vagas_part1.pkl.gz", "rb") as f:
+    with gzip.open("df_vagas/df_final_vagas_part1.pkl.gz", "rb") as f:
         df_vagas_part1 = pickle.load(f)
-    with gzip.open("df_vagas\df_final_vagas_part2.pkl.gz", "rb") as f:
+    with gzip.open("df_vagas/df_final_vagas_part2.pkl.gz", "rb") as f:
         df_vagas_part2 = pickle.load(f)
     df_vagas = pd.concat([df_vagas_part1, df_vagas_part2], ignore_index=True)
 
-    with gzip.open("df_applicants\df_final_candidatos_part1.pkl.gz", "rb") as f:
+    with gzip.open("df_applicants/df_final_candidatos_part1.pkl.gz", "rb") as f:
         df_candidatos_part1 = pickle.load(f)
-    with gzip.open("df_applicants\df_final_candidatos_part2.pkl.gz", "rb") as f:
+    with gzip.open("df_applicants/df_final_candidatos_part2.pkl.gz", "rb") as f:
         df_candidatos_part2 = pickle.load(f)
     df_candidatos = pd.concat([df_candidatos_part1, df_candidatos_part2], ignore_index=True)
 
-    with open("df_applicants\df_applicants.pkl", "rb") as f:
+    with open("df_applicants/df_applicants.pkl", "rb") as f:
         df_applicants = pickle.load(f)
-    with open("df_vagas\df_vagas.pkl", "rb") as f:  # Adicionando o df_vagas
+    with open("df_vagas/df_vagas.pkl", "rb") as f:  # Adicionando o df_vagas
         df_vagas_additional = pickle.load(f)
     return df_vagas, df_candidatos, df_applicants, df_vagas_additional
 
