@@ -27,3 +27,8 @@ Nossa solução utiliza **Embeddings** e técnicas de NLP para:
 3. **Cálculo de similaridade** usando distância vetorial;
 4. **Criação de modelo de score de compatibilidade**;
 5. **Deploy em ambiente interativo com Streamlit**.
+
+
+## Link do Streamlit
+
+https://datathondatanalytics.streamlit.app
