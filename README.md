@@ -32,3 +32,34 @@ Nossa solução utiliza **Embeddings** e técnicas de NLP para:
 ## Link do Streamlit
 
 https://datathondatanalytics.streamlit.app
+
+## 📁 Estrutura de Pastas e Arquivos
+
+### Pasta df_applicants:
+  Contém os dados dos candidatos
+  
+│   ├── df_applicants.pkl                # Dataset bruto original com os candidatos
+
+│   ├── df_final_candidatos_part1.pkl   # Parte 1 dos candidatos com embeddings pré-processados
+
+│   └── df_final_candidatos_part2.pkl   # Parte 2 dos candidatos com embeddings pré-processados
+
+### Pasta df_vagas:
+  Contém os dados das vagas
+
+│   ├── df_vagas.pkl                    # Dataset bruto original com as vagas
+
+│   ├── df_final_vagas_part1.pkl       # Parte 1 das vagas com embeddings pré-processados
+
+│   └── df_final_vagas_part2.pkl       # Parte 2 das vagas com embeddings pré-processados
+
+### Pasta images:
+  Imagens utilizadas na aplicação
+
+│   └── logo_decision.png              # Logotipo utilizado no Streamlit
+
+### Arquivos principais:
+
+├── datathon.ipynb                       # Notebook com a análise exploratória e pré-processamento dos dados
+
+├── app.py                               # Código principal da aplicação Streamlit para recomendação
